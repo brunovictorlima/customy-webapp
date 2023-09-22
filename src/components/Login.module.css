@@ -4,6 +4,7 @@
   width: 150px;
   height: 150px;
   background-repeat: no-repeat;
+  padding-bottom: 30px;
 }
 
 .login_form {
@@ -13,6 +14,12 @@
   justify-content: center;
 }
 
-.login_form {
-  padding-bottom: 3rem;
+.login_form span {
+  font-size: 0.8rem;
+}
+
+.login_form span:nth-last-child(1) {
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--yellow);
 }

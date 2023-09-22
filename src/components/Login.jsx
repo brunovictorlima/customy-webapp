@@ -8,6 +8,7 @@ function Login() {
     <section>
       <div className={styles.login_form}>
         <div className={styles.logo}></div>
+
         <Input
           type="text"
           text="e-mail"
@@ -23,8 +24,12 @@ function Login() {
         />
 
         <SubmitButton text="LOGIN" />
+
         <span>Não tem acesso?</span>
-        <SubmitButton text="REGISTRE-SE" />
+
+        <SubmitButton text="REGISTRE-SE" customClass="signup_btn" />
+
+        <span>Esqueci minha senha</span>
       </div>
     </section>
   );

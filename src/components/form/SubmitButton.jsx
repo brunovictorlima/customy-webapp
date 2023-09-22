@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import styles from "./SubmitButton.module.css";
 
-function SubmitButton({ text }) {
+function SubmitButton({ text, customClass }) {
   return (
     <div>
-      <button className={styles.btn}>{text}</button>
+      <button className={`${styles.btn} ${styles[customClass]}`}>{text}</button>
     </div>
   );
 }
