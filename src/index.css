@@ -166,6 +166,10 @@ img {
   --purple: #a53eff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--grey);
   color: var(--white);

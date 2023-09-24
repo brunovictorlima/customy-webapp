@@ -1,7 +1,7 @@
 import styles from "./Login.module.css";
 
-import Input from "./form/Input";
-import SubmitButton from "./form/SubmitButton";
+import Input from "../components/form/Input";
+import SubmitButton from "../components/form/SubmitButton";
 
 function Login() {
   return (
@@ -25,7 +25,7 @@ function Login() {
 
         <SubmitButton text="LOGIN" />
 
-        <span>Não tem acesso?</span>
+        <span>Não tem uma conta?</span>
 
         <SubmitButton text="REGISTRE-SE" customClass="signup_btn" />
 
