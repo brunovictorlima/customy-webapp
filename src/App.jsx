@@ -2,12 +2,13 @@
 import Container from "./components/layout/Container";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Customers from "./pages/Customers";
 
 function App() {
   return (
     <>
       <Container>
-        <Signup />
+        <Customers />
       </Container>
     </>
   );

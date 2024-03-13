@@ -11,16 +11,16 @@ function Signup() {
 
         <Input
           type="text"
-          text="Digite um email válido"
+          text="Digite seu e-mail"
           name="email"
-          placeholder="Digite seu e-mail"
+          placeholder="example@email.com"
         />
 
         <Input
           type="text"
           text="Digite o email novamente"
           name="email"
-          placeholder="Digite seu e-mail"
+          placeholder="example@email.com"
         />
 
         <Input

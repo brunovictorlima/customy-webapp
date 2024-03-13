@@ -1,0 +1,13 @@
+.EditButton {
+    width: 30px;
+    height: 30px;
+    background-color: var(--blue);
+    border-radius: 50%;
+}
+
+.DeleteButton {
+    width: 30px;
+    height: 30px;
+    background-color: var(--red);
+    border-radius: 50%;
+}
