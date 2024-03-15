@@ -1,0 +1,9 @@
+.button {
+    background-color: var(--blue);
+    width: 350px;
+    height: auto;
+}
+
+.create {
+    background-image: url("../../assets/icons/newcostumer_icon.svg");
+}

@@ -1,8 +1,8 @@
 import styles from "./Button.module.css";
 
-function Button() {
+function Button({type}) {
     return(
-        <div className={styles.EditButton}>
+        <div className={styles[type]}>
         </div>
     )
 }

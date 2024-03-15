@@ -1,0 +1,25 @@
+.bar {
+    background-color: var(--lightgrey);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 5px 14px;
+    margin: 4px 0;
+}
+
+.bar span {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.container_inline {
+    display: flex;
+    flex-direction: row;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
