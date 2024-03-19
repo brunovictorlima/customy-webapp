@@ -8,27 +8,22 @@ import BigButton from "../components/customers_page/BigButton";
 function Customers() {
     return (
         <Container>
-            <div className={styles.SpaceBetween}>
-                <div>
-                    <section>
-                        <h1>Clientes</h1>
-                        <Input
-                            type="text"
-                            name="busca"
-                            placeholder="Faça sua busca"
-                        />
-                        <SubmitButton text="BUSCAR" customClass="signup_btn" />
-                    </section>
-                    <section>
-                        <Customer name="João" />
-                        <Customer name="Maria" />
-                        <Customer name="Matheus" />
-                        <Customer name="Sara" />
-                    </section>
+            <div>
+                <div className={styles.top}>
+                    <h1 className={styles.title}>Clientes</h1>
+                    <Input
+                        type="text"
+                        name="busca"
+                        placeholder="Faça sua busca"
+                    />
+                    <SubmitButton text="BUSCAR" customClass="signup_btn" />
                 </div>
-                <div>
-                    <BigButton type="create" name="NOVO CLIENTE" />
+                <div className={styles.customersList}>
+                    <Customer name="João" />
+                    <Customer name="Maria" />
+                    <Customer name="Matheus" />
                 </div>
+                <BigButton icon="newCostumer" name="NOVO CLIENTE" />
             </div>
         </Container>
     );
