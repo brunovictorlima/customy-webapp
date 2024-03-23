@@ -8,7 +8,7 @@ import BigButton from "../components/customers_page/BigButton";
 function Customers() {
     return (
         <Container>
-            <div>
+            <div className={styles.centralize}>
                 <div className={styles.top}>
                     <h1 className={styles.title}>Clientes</h1>
                     <Input

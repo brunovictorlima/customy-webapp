@@ -1,9 +1,9 @@
 .EditButton {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     background-color: var(--blue);
     background-image: url("../../assets/icons/edit_icon.svg");
-    background-size: 60% auto;
+    background-size: 55% auto;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50%;
@@ -11,11 +11,11 @@
 }
 
 .DeleteButton {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     background-color: var(--red);
     background-image: url("../../assets/icons/delete_icon.svg");
-    background-size: 60% auto;
+    background-size: 55% auto;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50%;
