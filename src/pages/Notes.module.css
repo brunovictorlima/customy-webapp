@@ -1,0 +1,34 @@
+.header {
+  background-color: red;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.customerName {
+  font-size: 2rem;
+  color: var(--yellow);
+  padding-left: 2.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.phoneNumber {
+  font-size: 1.2rem;
+  color: var(--yellow);
+  padding-left: 2.5rem;
+}
+
+.title {
+  background-color: var(--darkgray);
+  width: 100%;
+  padding: 0.5rem 0 0.5rem 2rem;
+  font-size: 1.6rem;
+  padding-left: 2.5rem;
+  margin: 1rem 0;
+}
+
+.notesList {
+  background-color: var(--lightgray);
+  width: 100%;
+  padding: 0 2.5rem;
+}

@@ -1,0 +1,30 @@
+.button {
+  background-color: var(--blue);
+  width: 320px;
+  height: 70px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.newCostumer {
+  background-image: url("../assets/icons/newcostumer_icon.svg");
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+}
+
+.newCostumer2 {
+  background-image: url("../assets/icons/save_icon.svg");
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+}
+
+.button span {
+  font-size: 1.4rem;
+  margin-left: 5px;
+}
