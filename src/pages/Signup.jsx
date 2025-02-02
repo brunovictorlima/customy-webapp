@@ -12,7 +12,7 @@ function Signup() {
         <Input
           type="text"
           text="Digite seu e-mail"
-          name="email"
+          name="emailConfirmation"
           placeholder="example@email.com"
         />
 
@@ -33,11 +33,11 @@ function Signup() {
         <Input
           type="password"
           text="Digite a senha novamente"
-          name="password"
+          name="passwordConfirmation"
           placeholder="Digite sua senha"
         />
 
-        <SubmitButton text="REGISTRAR" customClass="signup_btn" />
+        <SubmitButton text="REGISTRAR" customClass="btn" />
       </div>
     </section>
   );

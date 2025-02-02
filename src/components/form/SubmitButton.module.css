@@ -14,12 +14,12 @@
 }
 
 .btn:hover {
-  background-color: dodgerblue;
+  background-color: var(--darkblue);
 }
 
 .signup_btn {
   background-color: var(--yellow);
-  color: var(--grey);
+  color: var(--darkgray);
 }
 
 .signup_btn:hover {
