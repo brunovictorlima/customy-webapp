@@ -11,14 +11,21 @@
 }
 
 .newCostumer {
-  background-image: url("../assets/icons/newcostumer_icon.svg");
+  background-image: url('../../assets/icons/newcostumer_icon.svg');
   width: 35px;
   height: 35px;
   margin-right: 5px;
 }
 
-.newCostumer2 {
-  background-image: url("../assets/icons/save_icon.svg");
+.newNote {
+  background-image: url('../../assets/icons/edit_icon.svg');
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+}
+
+.save {
+  background-image: url('../../assets/icons/save_icon.svg');
   width: 35px;
   height: 35px;
   margin-right: 5px;

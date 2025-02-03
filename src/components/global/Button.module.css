@@ -1,4 +1,16 @@
-.EditButton {
+.ExpandButton {
+    width: 45px;
+    height: 45px;
+    background-color: var(--purple);
+    background-image: url("../../assets/icons/expand_icon.svg");
+    background-size: 55% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    margin: 4px;
+  }
+  
+  .EditButton {
     width: 45px;
     height: 45px;
     background-color: var(--blue);
@@ -8,9 +20,9 @@
     background-position: center;
     border-radius: 50%;
     margin: 4px;
-}
-
-.DeleteButton {
+  }
+  
+  .DeleteButton {
     width: 45px;
     height: 45px;
     background-color: var(--red);
@@ -20,4 +32,5 @@
     background-position: center;
     border-radius: 50%;
     margin: 4px;
-}
+  }
+  

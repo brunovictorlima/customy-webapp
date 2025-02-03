@@ -1,5 +1,5 @@
 import styles from "./NoteCard.module.css";
-import Button from "./Button";
+import Button from "../global/Button";
 
 function NoteCard() {
   return (

@@ -17,11 +17,11 @@
   background-color: var(--darkblue);
 }
 
-.signup_btn {
+.signupBtn {
   background-color: var(--yellow);
   color: var(--darkgray);
 }
 
-.signup_btn:hover {
+.signupBtn:hover {
   background-color: var(--mustard);
 }

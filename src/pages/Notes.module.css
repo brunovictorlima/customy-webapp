@@ -1,5 +1,4 @@
 .header {
-  background-color: red;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -29,6 +28,11 @@
 
 .notesList {
   background-color: var(--lightgray);
-  width: 100%;
+  height: 60vh;
+  width: 100vw;
   padding: 0 2.5rem;
+
+  /* implementação de rolagem */
+  overflow-y: auto;
+  overflow-x: hidden;
 }

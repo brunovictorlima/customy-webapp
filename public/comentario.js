@@ -5,13 +5,24 @@
 // Páginas criadas:
 
 // - Login [ok]
-// - Signp [ok]
+// - Signup [ok]
+// - Customers [ok]
+// - Notes [ok]
 
 
 // ---------------------------------
 
 // Próximas tarefas:
 
-// - Criar roteamento das páginas já criadas.
+
+// 01 - Criar formulários de criação e edição de notas.
+
+/* 02 - Implementar modal de confirmação de exclusão de cliente
+baseado no projeto Tasklist e replicar a mesma lógica para as notas. */
+
+// 03 - Fazer o roteamento das páginas que faltam no App.jsx.
+
+
+
 
 

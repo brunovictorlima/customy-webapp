@@ -1,25 +1,26 @@
-import styles from "./Login.module.css";
+import styles from './Login.module.css';
 
-import Input from "../components/form/Input";
-import SubmitButton from "../components/form/SubmitButton";
+import Input from '../components/form/Input';
+import SubmitButton from '../components/form/SubmitButton';
+import { Link } from 'react-router-dom';
 
 function Signup() {
   return (
     <section>
-      <div className={styles.login_form}>
+      <div className={styles.loginForm}>
         <div className={styles.logo}></div>
 
         <Input
           type="text"
           text="Digite seu e-mail"
-          name="emailConfirmation"
+          name="email"
           placeholder="example@email.com"
         />
 
         <Input
           type="text"
           text="Digite o email novamente"
-          name="email"
+          name="emailConfirmation"
           placeholder="example@email.com"
         />
 
@@ -37,7 +38,9 @@ function Signup() {
           placeholder="Digite sua senha"
         />
 
-        <SubmitButton text="REGISTRAR" customClass="btn" />
+        <Link to="/">
+          <SubmitButton text="REGISTRAR" customClass="btn" />
+        </Link>
       </div>
     </section>
   );

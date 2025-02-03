@@ -7,7 +7,7 @@
   padding-bottom: 30px;
 }
 
-.login_form {
+.loginForm {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,11 +15,11 @@
   gap: 1rem;
 }
 
-.login_form span {
+.loginForm span {
   font-size: 1rem;
 }
 
-.login_form span:nth-last-child(1) {
+.loginForm span:nth-last-child(1) {
   text-decoration: underline;
   cursor: pointer;
   color: var(--yellow);

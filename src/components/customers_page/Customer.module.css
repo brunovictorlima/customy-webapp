@@ -1,5 +1,5 @@
 .bar {
-    background-color: var(--lightgrey);
+    background-color: var(--lightgray);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
