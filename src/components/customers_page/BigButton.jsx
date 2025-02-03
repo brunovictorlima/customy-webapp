@@ -1,6 +1,6 @@
 import styles from "./BigButton.module.css";
+import {PropTypes} from "prop-types";
 
-// eslint-disable-next-line react/prop-types
 function BigButton({icon,name}) {
     return (
         <div className={styles.button}>
@@ -8,6 +8,11 @@ function BigButton({icon,name}) {
             <span>{name}</span>
         </div>
     )
+}
+
+BigButton.propTypes = {
+    icon: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
 }
 
 export default BigButton;
