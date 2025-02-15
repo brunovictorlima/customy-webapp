@@ -7,7 +7,7 @@ function Customer({ name }) {
   return (
     <div className={styles.container_inline}>
       <div className={styles.bar}>
-        <span>{name}</span>
+        <span className={styles.name}>{name}</span>
         <div className={styles.buttons}>
           <Link to="/editCustomer">
             <Button type="EditButton" />

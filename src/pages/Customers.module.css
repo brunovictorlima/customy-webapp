@@ -18,4 +18,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content:space-between;
+    /* tamanho da view */
+    height: 88vh;
+}
+
+.centralize .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 0.6rem;
 }

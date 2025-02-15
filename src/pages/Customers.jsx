@@ -25,9 +25,14 @@ function Customers() {
           <Customer name="Pedro" />
           <Customer name="Augusto" />
         </div>
+       <div className={styles.buttons}>
         <Link to="/newCustomer">
-          <BigButton icon="newCostumer" name="NOVO CLIENTE" />
-        </Link>
+            <BigButton icon="newCostumer" name="NOVO CLIENTE" />
+          </Link>
+          <Link to="/">
+            <SubmitButton text="DESLOGAR" customClass="logoffBtn" />
+          </Link>
+       </div>
       </div>
     </Container>
   );

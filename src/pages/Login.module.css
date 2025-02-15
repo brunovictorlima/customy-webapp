@@ -16,10 +16,10 @@
 }
 
 .loginForm span {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
-.loginForm span:nth-last-child(1) {
+.loginForm .recoverPass {
   text-decoration: underline;
   cursor: pointer;
   color: var(--yellow);

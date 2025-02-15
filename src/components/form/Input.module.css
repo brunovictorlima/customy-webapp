@@ -9,15 +9,16 @@
 }
 
 .form_control input {
+  width: 310px;
+  height: 57px;
   font-family: "Roboto Slab", serif;
+  font-size: 1.3rem;
   background-color: var(--darkgrey);
   color: var(--yellow);
   padding-left: 10px;
   border-radius: 5px;
   border: 1px solid;
   border-color: var(--yellow);
-  width: 320px;
-  height: 50px;
   outline: none;
 }
 

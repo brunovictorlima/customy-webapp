@@ -37,7 +37,7 @@ function Login() {
           <SubmitButton text="REGISTRE-SE" customClass="signupBtn" />
         </Link>
 
-        <span>Esqueci minha senha</span>
+        <span className={styles.recoverPass}>Esqueci minha senha</span>
       </div>
     </section>
   );

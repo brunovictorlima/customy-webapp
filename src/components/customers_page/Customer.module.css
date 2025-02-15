@@ -6,7 +6,7 @@
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    padding: 5px 14px;
+    padding: 5px 40px;
     margin: 4px 0;
     overflow: hidden;
 }
@@ -23,4 +23,11 @@
 .buttons {
     display: flex;
     flex-direction: row;
+}
+
+.name {
+    display: flex;
+    width: 64%;
+    height: 80%;
+    align-items: center;
 }
