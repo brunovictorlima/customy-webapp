@@ -2,6 +2,7 @@ import styles from './forms.module.css';
 
 import Input from '../components/form/Input';
 import BigButton from '../components/global/BigButton';
+import SubmitButton from '../components/form/SubmitButton';
 import { Link } from 'react-router-dom';
 
 const NewCustomer = () => {
@@ -28,9 +29,14 @@ const NewCustomer = () => {
           placeholder="example@email.com"
         />
       </div>
-      <Link to="/customers">
-        <BigButton icon="save" name="SALVAR" />
-      </Link>
+      <div className={styles.buttons}>
+        <Link to="/customers">
+          <BigButton icon="save" name="SALVAR" />
+        </Link>
+        <Link to="/customers">
+          <SubmitButton text="VOLTAR" customClass="logoffBtn" />
+        </Link>
+      </div>
     </section>
   );
 };

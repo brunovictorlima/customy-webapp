@@ -27,11 +27,11 @@ function Customers() {
         </div>
        <div className={styles.buttons}>
         <Link to="/newCustomer">
-            <BigButton icon="newCostumer" name="NOVO CLIENTE" />
-          </Link>
-          <Link to="/">
-            <SubmitButton text="DESLOGAR" customClass="logoffBtn" />
-          </Link>
+          <BigButton icon="newCostumer" name="NOVO CLIENTE" />
+        </Link>
+        <Link to="/">
+          <SubmitButton text="DESLOGAR" customClass="logoffBtn" />
+        </Link>
        </div>
       </div>
     </Container>
