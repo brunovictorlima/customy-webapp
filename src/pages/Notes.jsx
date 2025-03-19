@@ -1,10 +1,11 @@
-import styles from "./Notes.module.css";
-import NoteCard from "../components/notes_page/NoteCard";
-import Container from "../components/layout/Container";
-import BigButton from "../components/global/BigButton";
-import { PropTypes } from "prop-types";
+import styles from './Notes.module.css';
+import NoteCard from '../components/notes_page/NoteCard';
+import Container from '../components/layout/Container';
+import BigButton from '../components/global/BigButton';
+import { PropTypes } from 'prop-types';
+import { Link } from 'react-router-dom';
 
-function Notes({name, phoneNumber}) {
+function Notes({ name, phoneNumber }) {
   return (
     <Container>
       <div className={styles.header}>
@@ -18,7 +19,13 @@ function Notes({name, phoneNumber}) {
         <NoteCard />
         <NoteCard />
       </div>
-      <BigButton icon="newNote" name="NOVA ANOTAÇÃO" />
+
+      <Link to="/newNote">
+        <BigButton icon="newNote" name="NOVA ANOTAÇÃO" />
+      </Link>
+      <Link to="/customers">
+        <SubmitButton text="VOLTAR" customClass="logoffBtn" />
+      </Link>
     </Container>
   );
 }

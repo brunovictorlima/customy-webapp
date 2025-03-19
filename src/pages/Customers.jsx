@@ -18,21 +18,33 @@ function Customers() {
           <SubmitButton text="BUSCAR" customClass="signup_btn" />
         </div>
         <div className={styles.customersList}>
-          <Customer name="João" />
-          <Customer name="Maria" />
-          <Customer name="Matheus" />
-          <Customer name="Ana" />
-          <Customer name="Pedro" />
-          <Customer name="Augusto" />
+          <Link to="/notes">
+            <Customer name="João" />
+          </Link>
+          <Link to="/notes">
+            <Customer name="Maria" />
+          </Link>
+          <Link to="/notes">
+            <Customer name="Matheus" />
+          </Link>
+          <Link to="/notes">
+            <Customer name="Ana" />
+          </Link>
+          <Link to="/notes">
+            <Customer name="Pedro" />
+          </Link>
+          <Link to="/notes">
+            <Customer name="Augusto" />
+          </Link>
         </div>
-       <div className={styles.buttons}>
-        <Link to="/newCustomer">
-          <BigButton icon="newCostumer" name="NOVO CLIENTE" />
-        </Link>
-        <Link to="/">
-          <SubmitButton text="DESLOGAR" customClass="logoffBtn" />
-        </Link>
-       </div>
+        <div className={styles.buttons}>
+          <Link to="/newCustomer">
+            <BigButton icon="newCostumer" name="NOVO CLIENTE" />
+          </Link>
+          <Link to="/">
+            <SubmitButton text="DESLOGAR" customClass="logoffBtn" />
+          </Link>
+        </div>
       </div>
     </Container>
   );
