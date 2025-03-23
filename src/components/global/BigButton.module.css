@@ -1,5 +1,6 @@
 .button {
   background-color: var(--blue);
+  color: var(--white);
   width: 310px;
   height: 57px;
   border-radius: 5px;

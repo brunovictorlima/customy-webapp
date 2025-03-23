@@ -6,8 +6,13 @@ import SubmitButton from '../components/form/SubmitButton';
 import { Link } from 'react-router-dom';
 
 const NewCustomer = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Previne o comportamento padrão do formulário
+    console.log('Formulário enviado!');
+  };
+
   return (
-    <section className={styles.form}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <h1 className={styles.title}>Novo cliente</h1>
       <div className={styles.inputs}>
         <Input
@@ -30,14 +35,14 @@ const NewCustomer = () => {
         />
       </div>
       <div className={styles.buttons}>
-        <Link to="/customers">
+        <button type="submit">
           <BigButton icon="save" name="SALVAR" />
-        </Link>
+        </button>
         <Link to="/customers">
           <SubmitButton text="VOLTAR" customClass="logoffBtn" />
         </Link>
       </div>
-    </section>
+    </form>
   );
 };
 

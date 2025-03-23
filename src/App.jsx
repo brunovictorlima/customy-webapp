@@ -3,9 +3,10 @@ import Container from './components/layout/Container';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Customers from './pages/Customers';
-import Notes from './pages/Notes';
 import NewCustomer from './pages/NewCustomer';
 import EditCustomer from './pages/editCustomer';
+import Notes from './pages/Notes';
+import NewNote from './pages/NewNote';
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/customers" element={<Customers />} />
-            <Route path="/newCustomer" element={<NewCustomer />} />
-            <Route path="/editCustomer" element={<EditCustomer />} />
+            <Route path="/customers/new" element={<NewCustomer />} />
+            <Route path="/customers/edit/:id" element={<EditCustomer />} />
             <Route path="/notes" element={<Notes />} />
+            <Route path="/notes/new" element={<NewNote />} />
           </Routes>
         </Container>
       </BrowserRouter>

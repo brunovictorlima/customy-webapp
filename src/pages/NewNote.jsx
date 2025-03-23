@@ -11,22 +11,22 @@ const NewNote = () => {
       <h1 className={styles.title}>Nova anotação</h1>
       <div className={styles.inputs}>
         <Input
+          type="date"
+          text="Data"
+          name="noteDate"
+          placeholder="dd/mm/aaaa"
+        />
+        <Input
           type="text"
-          text="Nome"
-          name="customerName"
-          placeholder="Digite o nome do(a) cliente"
+          text="Título"
+          name="title"
+          placeholder="Digite o título da anotação"
         />
         <Input
-          type="phone"
-          text="Telefone"
-          name="phoneNumber"
-          placeholder="(00) 00000-0000"
-        />
-        <Input
-          type="email"
-          text="E-mail"
+          type="textarea"
+          text="Anotação"
           name="email"
-          placeholder="example@email.com"
+          placeholder="Escreva sua anotação"
         />
       </div>
       <div className={styles.buttons}>

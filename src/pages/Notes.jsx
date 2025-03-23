@@ -2,6 +2,7 @@ import styles from './Notes.module.css';
 import NoteCard from '../components/notes_page/NoteCard';
 import Container from '../components/layout/Container';
 import BigButton from '../components/global/BigButton';
+import SubmitButton from '../components/form/SubmitButton';
 import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
 
