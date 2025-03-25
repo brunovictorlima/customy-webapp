@@ -21,20 +21,20 @@ function Input({
         placeholder={placeholder}
         value={value}
         onChange={handleOnChange}
-        {...rest} // Permite passar atributos extras, como required, disabled, etc.
+        {...rest} // Permite atributos extras como required e disabled
       />
     </div>
   );
 }
 
 Input.propTypes = {
-  type: PropTypes.string.isRequired, // Ex.: "text", "email", "password", etc.
-  text: PropTypes.string, // Texto exibido no <label>
-  name: PropTypes.string.isRequired, // Nome do input para identificação
-  placeholder: PropTypes.string, // Placeholder é opcional
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired, // Pode ser string ou número
-  handleOnChange: PropTypes.func.isRequired, // Função para capturar mudanças
-  customClass: PropTypes.string, // Classe CSS adicional (opcional)
+  type: PropTypes.string.isRequired,
+  text: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  handleOnChange: PropTypes.func.isRequired,
+  customClass: PropTypes.string,
 };
 
 export default Input;
