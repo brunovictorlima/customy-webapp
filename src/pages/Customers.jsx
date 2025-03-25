@@ -62,9 +62,11 @@ function Customers() {
             value={search} // Controlado pelo estado
             handleOnChange={handleSearchChange} // Atualiza o estado
           />
-          <button type="button" onClick={handleSearch}>
-            <SubmitButton text="BUSCAR" customClass="signup_btn" />
-          </button>
+          <SubmitButton
+            text="BUSCAR"
+            customClass="signup_btn"
+            onClick={handleSearch}
+          />
         </div>
         <div className={styles.customersList}>
           {loading ? (
