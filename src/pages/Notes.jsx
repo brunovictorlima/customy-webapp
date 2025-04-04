@@ -81,7 +81,7 @@ function Notes() {
           <p className={styles.noNotes}>Nenhuma anotação encontrada.</p>
         )}
       </div>
-      <Link to={`/newNote?customerId=${id}`}>
+      <Link to={'/notes/new'}>
         <BigButton icon="newNote" name="NOVA ANOTAÇÃO" />
       </Link>
       <Link to="/customers">
