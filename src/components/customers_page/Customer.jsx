@@ -7,7 +7,10 @@ function Customer({ id, name }) {
   return (
     <div className={styles.container_inline}>
       <div className={styles.bar}>
-        <span className={styles.name}>{name}</span>
+        {/* Link direto no nome do cliente para Notes */}
+        <Link to={`/notes/${id}`} className={styles.name}>
+          {name}
+        </Link>
         <div className={styles.buttons}>
           <Link to={`/customers/edit/${id}`}>
             <Button type="EditButton" />
