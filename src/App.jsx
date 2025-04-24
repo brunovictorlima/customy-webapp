@@ -4,7 +4,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Customers from './pages/Customers';
 import NewCustomer from './pages/NewCustomer';
-import EditCustomer from './pages/editCustomer';
+import EditCustomer from './pages/EditCustomer';
 import Notes from './pages/Notes';
 import NewNote from './pages/NewNote';
 

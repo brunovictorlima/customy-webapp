@@ -25,13 +25,13 @@ const NewCustomer = () => {
       try {
         const response = await api.get('/customers');
         const maxId = response.data.reduce(
-          (max, customer) => Math.max(max, customer.id || 0),
-          0,
+          (max, customer) => Math.max(max, Number(customer.id) || 0), // Garante que IDs anteriores sejam tratados como número
+          0
         );
-        setNextId(maxId + 1); // Define o próximo ID baseado no maior ID existente
+        setNextId(String(maxId + 1)); // Converte para string antes de salvar no estado
       } catch (err) {
         console.error('Erro ao buscar o próximo ID:', err);
-        setNextId(1); // Começa com 1 em caso de erro
+        setNextId("1"); // Define como string mesmo em caso de erro
       }
     };
 
@@ -56,7 +56,7 @@ const NewCustomer = () => {
         return;
       }
 
-      const newCustomer = { id: nextId, ...customer }; // Gera cliente com ID padronizado
+      const newCustomer = { id: String(nextId), ...customer }; // Garante que o ID seja string
       await api.post('/customers', newCustomer);
       setSuccess(true);
       navigate('/customers'); // Redireciona após sucesso

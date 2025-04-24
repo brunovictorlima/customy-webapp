@@ -9,9 +9,8 @@ import api from '../services/api';
 
 const NewNote = () => {
   const [note, setNote] = useState({
-    noteDate: '',
     title: '',
-    content: '',
+    note: '', // Mantém a estrutura correta conforme o banco
   }); // Estado para controlar os campos do formulário
   const [error, setError] = useState(null); // Mensagem de erro
   const [success, setSuccess] = useState(false); // Controle de sucesso
@@ -26,13 +25,13 @@ const NewNote = () => {
       try {
         const response = await api.get('/notes');
         const maxId = response.data.reduce(
-          (max, note) => Math.max(max, note.id || 0),
+          (max, note) => Math.max(max, Number(note.id) || 0), // Garante que IDs anteriores sejam tratados corretamente
           0,
         );
-        setNextId(maxId + 1); // Define o próximo ID baseado no maior ID existente
+        setNextId(String(maxId + 1)); // Converte para string antes de salvar no estado
       } catch (err) {
         console.error('Erro ao buscar o próximo ID:', err);
-        setNextId(1); // Começa com 1 em caso de erro
+        setNextId('1'); // Define como string mesmo em caso de erro
       }
     };
 
@@ -45,6 +44,15 @@ const NewNote = () => {
     setNote({ ...note, [name]: value });
   };
 
+  // Função para formatar a data no padrão `dd/mm/yyyy`
+  const getFormattedDate = () => {
+    const now = new Date();
+    const day = String(now.getDate()).padStart(2, '0');
+    const month = String(now.getMonth() + 1).padStart(2, '0'); // Mês começa do 0
+    const year = now.getFullYear();
+    return `${day}/${month}/${year}`;
+  };
+
   // Função para lidar com o envio do formulário
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -52,12 +60,24 @@ const NewNote = () => {
     setError(null);
 
     try {
-      if (!note.noteDate || !note.title || !note.content) {
+      if (!note.title || !note.note) {
         setError('Todos os campos são obrigatórios.');
         return;
       }
 
-      const newNote = { id: nextId, customerId, ...note }; // Gera nota com ID padronizado e associa ao cliente
+      if (!customerId) {
+        setError('ID do cliente não identificado.');
+        return;
+      }
+
+      const newNote = {
+        id: String(nextId),
+        customerId: String(customerId),
+        date: getFormattedDate(), // Insere a data automaticamente
+        timestamp: new Date().toISOString(), // Mantém a hora oculta para auditoria
+        ...note,
+      };
+
       await api.post('/notes', newNote);
       setSuccess(true);
       navigate(`/notes/${customerId}`); // Redireciona para a página de notas do cliente
@@ -72,14 +92,6 @@ const NewNote = () => {
       <h1 className={styles.title}>Nova anotação</h1>
       <div className={styles.inputs}>
         <Input
-          type="date"
-          text="Data"
-          name="noteDate"
-          placeholder="dd/mm/aaaa"
-          value={note.noteDate}
-          handleOnChange={handleChange}
-        />
-        <Input
           type="text"
           text="Título"
           name="title"
@@ -90,9 +102,9 @@ const NewNote = () => {
         <Input
           type="textarea"
           text="Conteúdo"
-          name="content"
+          name="note"
           placeholder="Escreva sua anotação"
-          value={note.content}
+          value={note.note}
           handleOnChange={handleChange}
         />
       </div>
@@ -121,3 +133,4 @@ const NewNote = () => {
 };
 
 export default NewNote;
+

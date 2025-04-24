@@ -73,8 +73,8 @@ function Notes() {
             <NoteCard
               key={note.id}
               title={note.title}
-              content={note.note} // Substitua por note.content, se necessário
-              date={note.date}
+              content={note.note || ''} // Evita undefined, garantindo uma string vazia caso o dado não esteja presente
+              date={note.date || 'Data não disponível'} // Define um valor padrão caso não tenha data
             />
           ))
         ) : (
@@ -92,3 +92,4 @@ function Notes() {
 }
 
 export default Notes;
+

@@ -21,7 +21,7 @@ function NoteCard({ title, content, date, onExpand, onEdit, onDelete }) {
 
 NoteCard.propTypes = {
   title: PropTypes.string.isRequired, // Título da anotação
-  content: PropTypes.string.isRequired, // Conteúdo da anotação
+  content: PropTypes.string, // Conteúdo da anotação
   date: PropTypes.string.isRequired, // Data da anotação
   onExpand: PropTypes.func, // Função para expandir a anotação
   onEdit: PropTypes.func, // Função para editar a anotação
@@ -29,3 +29,4 @@ NoteCard.propTypes = {
 };
 
 export default NoteCard;
+
